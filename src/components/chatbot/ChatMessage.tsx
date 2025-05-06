@@ -3,12 +3,12 @@ import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui/avatar";
 import { Brain, User } from "lucide-react";
 
-type MessageType = "user" | "bot";
+
 
 interface ChatMessageProps {
-  type: MessageType;
+  type: "user" | "bot";
   content: string;
-  timestamp?: Date;
+  timestamp: Date;
 }
 
 const ChatMessage = ({ type, content, timestamp = new Date() }: ChatMessageProps) => {
